@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<modification>
+    <name>Remember me</name>
+    <code>rememberwbc</code>
+    <version>1.0</version>
+    <author>Tran Binh</author>
+    <link>https://www.webico.vn</link>
+     
+	<file path="catalog/language/en-gb/account/login.php">
+
+        <operation>
+            <search index="0"><![CDATA[$_['text_login']                   = 'Login';]]></search>
+            <add position="after"><![CDATA[$_['remember_me']              = 'Remember me';
+            ]]></add>
+        </operation>
+
+    </file>
+	<file path="catalog/language/english/account/login.php">
+
+        <operation>
+            <search index="0"><![CDATA[$_['text_login']                   = 'Login';]]></search>
+            <add position="after"><![CDATA[$_['remember_me']              = 'Remember me';
+            ]]></add>
+        </operation>
+
+    </file>
+
+    <file path="catalog/controller/account/login.php">
+
+        <operation>
+            <search index="0"><![CDATA[$data['button_login'] = $this->language->get('button_login');]]></search>
+            <add position="after"><![CDATA[$data['remember_me'] = $this->language->get('remember_me');
+            ]]></add>
+        </operation>
+
+		<operation>
+            <search index="0"><![CDATA[$this->model_account_activity->addActivity('login', $activity_data);]]></search>
+            <add position="before"><![CDATA[if (isset($this->request->post['remember_me'])) {
+					setcookie("customer_id_cookie", $activity_data['customer_id'], time() + (10 * 365 * 24 * 60 * 60), "/");
+				}
+            ]]></add>
+        </operation>
+
+    </file>
+
+
+    <file path="catalog/view/theme/*/template/account/login.tpl">
+        <operation>
+            <search index="0"><![CDATA[<input type="submit" value="<?php echo $button_login; ?>" class="btn btn-primary" />]]></search>
+            <add position="before" offset="0"><![CDATA[
+			  <div class="form-group">
+              	<label for="input-remember">
+                <input type="checkbox" name="remember_me" id="input-remember" value="remember_checked" /> <?php echo $remember_me; ?>
+                </label>
+              </div>
+        ]]></add>
+        </operation>
+    </file>
+
+    <file path="catalog/view/theme/*/template/common/header.tpl">
+        <operation>
+            <search index="0"><![CDATA[<meta charset="UTF-8" />]]></search>
+            <add position="after" index="0" offset="0"><![CDATA[
+				<?php
+					if(isset($_COOKIE["customer_id_cookie"]) && $_COOKIE["customer_id_cookie"]!=''){
+					$_SESSION['default']['customer_id']=$_COOKIE["customer_id_cookie"];
+				?>
+				<script>
+				if (!sessionStorage.reloadHeader) {
+					sessionStorage.reloadHeader = 1;
+					location.reload();
+				}
+				</script>
+				<?php } ?>
+        ]]></add>
+        </operation>
+    </file>
+
+    <file path="catalog/controller/common/header.php">
+        <operation>
+            <search position="after"><![CDATA[$data['direction'] = $this->language->get('direction');]]></search>
+            <add position="after"><![CDATA[
+              if(isset($_COOKIE["customer_id_cookie"]) && $_COOKIE["customer_id_cookie"]!=''){
+      					$_SESSION['default']['customer_id']=$_COOKIE["customer_id_cookie"];
+                $this->session->data['customer_id'] = $_COOKIE["customer_id_cookie"];
+              }
+        ]]></add>
+        </operation>
+    </file>
+
+    <file path="catalog/controller/account/logout.php">
+        <operation>
+            <search index="0"><![CDATA[unset($this->session->data['vouchers']);]]></search>
+            <add position="after" index="0" offset="0"><![CDATA[
+				unset($this->session->data['remember_me']);
+				unset($_COOKIE['customer_id_cookie']);
+				setcookie("customer_id_cookie", "", -1, "/");
+        ]]></add>
+        </operation>
+    </file>
+
+
+
+</modification>
