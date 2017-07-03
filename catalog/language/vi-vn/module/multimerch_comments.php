@@ -1,6 +1,5 @@
 <?php
 
-/* Language file for MultiMerch Comments Addon */
 
 $_['ms_account_dashboard_comments'] = 'Last comments';
 
