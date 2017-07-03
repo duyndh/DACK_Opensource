@@ -19,4 +19,4 @@ $_['entry_password']               = 'Mật khẩu:';
 // Error
 $_['error_login']                  = 'Lỗi: Email hoặc mật khẩu không chính xác.';
 $_['error_approved']               = 'Thông báo: Tài khoản của bạn cần được kích hoạt trước rồi bạn mới đăng nhập được.'; 
-$_['error_attempts']               = 'Warning: Your account has exceeded allowed number of login attempts. Please try again in 1 hour.';
+$_['error_attempts']               = 'Cảnh báo: Tài khoản của bạn đã quá số lần đăng nhập. Vui lòng thử lại sau 1 giờ nữa.';
