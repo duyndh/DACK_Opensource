@@ -19,5 +19,5 @@ $_['text_livestream']   = 'FB LiveStream';
 $_['text_login']        = 'Đăng nhập';
 $_['text_register']     = 'Tạo Tài khoản';
 $_['text_invite_friends_msg']= 'Cùng mình khám phá gian hàng này nhé! Có rất nhiều sản phẩm hấp dẫn và các chương trình đặc biệt dành cho khách hàng thân thiết và khách hàng VIP đó!';
-$_['text_powered']      = 'Bản quyền của <a href="http://TENSHOP.com">TÊN SHOP</a><br /> %s &copy; %s';
+$_['text_powered']      = 'Bản quyền của <a href="http://localhost.com">Freee\'s store</a><br /> %s &copy; %s';
 ?>
