@@ -1,4 +1,4 @@
 <?php
 // Heading
-$_['heading_title'] = 'Products By Alphabet';
+$_['heading_title'] = 'Các sản phẩm bởi Alphabet';
 ?>
