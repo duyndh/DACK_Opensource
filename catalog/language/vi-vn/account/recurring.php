@@ -1,0 +1,56 @@
+<?php
+$_['heading_title'] = 'Chi phí theo định kỳ';
+$_['button_continue'] = 'Tiếp tục';
+$_['button_view'] = 'Xem chi tiết';
+$_['button_cancel_profile'] = 'Hủy thanh toán';
+$_['text_empty'] = 'No recurring payment profiles found';
+$_['text_product'] = 'Sản phẩm: ';
+$_['text_order'] = 'Đặt hàng: ';
+$_['text_quantity'] = 'Số lượng: ';
+$_['text_account'] = 'Tài khoản';
+$_['text_action'] = 'Action';
+$_['text_recurring'] = 'Thanh toán định kỳ';
+$_['text_transactions'] = 'Giao dịch';
+$_['button_return'] = 'Quay lại';
+$_['text_confirm_cancel'] = 'Bạn có chắc hủy profile này?';
+$_['text_empty_transactions'] = 'Không có giao dịch định kỳ nào cho profile này';
+
+$_['column_created'] = 'Created';
+$_['column_date_added'] = 'Created';
+$_['column_type'] = 'Type';
+$_['column_amount'] = 'Amount';
+$_['column_status'] = 'Status';
+$_['column_product'] = 'Product';
+$_['column_action'] = 'Action';
+$_['column_profile_id'] = 'Profile ID';
+$_['column_recurring_id'] = 'Profile ID';
+$_['text_recurring_detail'] = 'Chi tiết thanh toán định kỳ';
+$_['text_recurring_id'] = 'Profile ID: ';
+$_['text_payment_method'] = 'Phương thức thanh toán: ';
+$_['text_date_added'] = 'Created: ';
+$_['text_recurring_description'] = 'Miêu tả: ';
+$_['text_status'] = 'Trạng thái: ';
+$_['text_ref'] = 'Tham khảo: ';
+
+$_['text_status_active'] = 'Active';
+$_['text_status_inactive'] = 'Inactive';
+$_['text_status_cancelled'] = 'Cancelled';
+$_['text_status_suspended'] = 'Suspended';
+$_['text_status_expired'] = 'Expired';
+$_['text_status_pending'] = 'Pending';
+$_['text_transaction_date_added'] = 'Created';
+$_['text_transaction_created'] = 'Created';
+$_['text_transaction_payment'] = 'Payment';
+$_['text_transaction_outstanding_payment'] = 'Outstanding payment';
+$_['text_transaction_skipped'] = 'Payment skipped';
+$_['text_transaction_failed'] = 'Payment failed';
+$_['text_transaction_cancelled'] = 'Cancelled';
+$_['text_transaction_suspended'] = 'Suspended';
+$_['text_transaction_suspended_failed'] = 'Suspended from failed payment';
+$_['text_transaction_outstanding_failed'] = 'Outstanding payment failed';
+$_['text_transaction_expired'] = 'Expired';
+$_['text_cancelled'] = 'Thanh toán định kỳ đã bị hủy bỏ';
+
+$_['error_not_cancelled'] = 'Error: %s';
+$_['error_not_found'] = 'Không thể hủy profile';
+$_['success_cancelled'] = 'Thanh toán định kỳ đã bị hủy bỏ';
