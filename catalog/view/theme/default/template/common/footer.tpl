@@ -49,5 +49,5 @@ Please donate via PayPal to donate@opencart.com
 //-->
 
 <!-- Theme created by Welford Media for OpenCart 2.0 www.welfordmedia.co.uk -->
-
+<script type="text/javascript" async="async" defer="defer" data-cfasync="false" src="https://mylivechat.com/chatinline.aspx?hccid=33003592"></script>
 </body></html>

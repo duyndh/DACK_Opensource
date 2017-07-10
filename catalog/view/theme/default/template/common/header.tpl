@@ -36,6 +36,7 @@
 <?php foreach ($analytics as $analytic) { ?>
 <?php echo $analytic; ?>
 <?php } ?>
+
 </head>
 <body class="<?php echo $class; ?>">
 <nav id="top">
